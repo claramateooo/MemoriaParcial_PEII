@@ -1,4 +1,4 @@
-import InteractiveForm from "../islands/InteractiveForm.tsx";
+
 import ShoppingSearch from "../islands/ShoppingSearch.tsx";
 
 export default function Shopping(){

@@ -1,6 +1,6 @@
 import AboutSection from "../islands/Aboutsection.tsx";
 import InteractiveForm from "../islands/InteractiveForm.tsx";
-import Navbar from "../islands/Navbar.tsx";
+
 
 import TestButton from "../islands/TestButton.tsx";
 
