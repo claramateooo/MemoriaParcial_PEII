@@ -1,0 +1,493 @@
+/* global styles */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #fcfffe, 0 0 10px #f6f9f1, 0 0 15px #f9f9f0; }
+}
+
+.animate-glow {
+  animation: glow 1.5s infinite alternate;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(-45deg, #ecddeb, #e4f3ff, #d6d8f4, #ffffff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-position: center;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+/* Contenedor principal con Flexbox */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.title-container {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  padding: 0.75rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Título principal */
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0e0956; /* Color lila */
+  margin-bottom: 2rem;
+  animation: glow 1.5s infinite alternate;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #ff69b4, #8000ff); /* Gradiente como estampado */
+  color: transparent; /* Hacer el texto transparente para ver el fondo */
+  -webkit-background-clip: text; /* Clipa el fondo al texto */
+  background-clip: text;
+  font-weight: bold;
+}
+/* Estilo para el formulario interactivo */
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Input de búsqueda */
+.input-search {
+  width: 100%;
+  padding: 1rem 5.0rem;
+  font-size: 1.25rem;
+  border: 2px solid #ffffff;
+  border-radius: 60px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  margin-left: -3.5rem;
+}
+
+.input-search:focus {
+  outline: none;
+  border-color: #010a3f;
+  box-shadow: 0 0 10px rgba(252, 202, 248, 0.3);
+}
+
+.input-search:hover {
+  transform: scale(1.05);
+}
+
+/* Botón de búsqueda */
+.button-search {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(34, 5, 72);
+  border-radius: 60px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  color:white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border:rgb(223, 222, 229);
+  margin-top: 1rem;
+}
+
+.button-search:hover {
+  background: linear-gradient(to right,  #ff69b4, #8000ff);
+  transform: scale(1.05);
+}
+
+.button-search:active {
+  transform: scale(0.98);
+}
+
+
+
+.button-test:active {
+  transform: scale(0.98);
+}
+
+/* Estilo para el fondo GIF */
+.gif-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 1rem;
+}
+
+/* En tu archivo global.css o index.ts */
+.text-lila {
+  color: #bcbfff; /* Color lila específico */
+}
+.text-azul {
+  color: #098787; /* Color lila específico */
+}
+/* Estilo para el contenedor del Test con GIF de fondo */
+.test-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 4rem;
+  border-radius: 4rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+/* GIF de fondo con efecto de opacidad */
+.test-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 1rem;
+}
+
+/* Botón de Test */
+.button-test {
+  width: 100%;
+  padding: 1.25rem;
+  background: linear-gradient(to right, #aaafaa, #a1aab1);
+  color: white;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.button-test:hover {
+  background: linear-gradient(to right, #eac3da, #9eb8cd);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.button-test:active {
+  transform: scale(0.98);
+}
+/* Título ¡Encuentra lo que buscas! */
+.title-find {
+  font-size: 1rem;  /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: #ffffff; /* Azul oscuro */
+  text-transform: uppercase;  /* Poner en mayúsculas */
+  margin-bottom: 1rem; /* Espacio debajo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Sombra para darle más profundidad */
+  position: relative;
+  z-index: 10;  /* Aseguramos que esté por encima de otros elementos */
+  animation: pulseAnimation 3s ease-in-out infinite;  /* Animación de pulso */
+}
+
+/* Animación para un efecto de pulso */
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Añadir un gradiente en el texto para darle más colorido */
+.title-find::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;  /* Gradiente azul */
+  clip-path: inset(0 0 0 0);
+  z-index: -1;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-form label {
+  font-weight: bold;
+  color: #444;
+}
+
+.modal-form input,
+.modal-form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button-submit {
+  background: linear-gradient(to right, #4caf50, #2196f3);
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-submit:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #66bb6a, #42a5f5);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+/* Barra lateral */
+.navbar {
+  position: fixed; /* Fija la barra en la parte izquierda */
+  top: 0;
+  left: -250px; /* Inicialmente fuera de la pantalla */
+  height: 100%;
+  width: 250px; /* Ancho del menú lateral */
+  background-color: #ffffff;
+  color: rgba(197, 218, 228, 0.45);
+  transition: left 0.3s ease; /* Transición suave al abrir/cerrar */
+  z-index: 1000;
+  padding-top: 60px; /* Espaciado desde la parte superior */
+}
+
+.navbar.open {
+  left: 0; /* Mueve el menú a la izquierda cuando se abre */
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  padding: 20px;
+  text-align: left;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(33, 32, 32);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  background-color: #d3d8f8;
+  border-radius: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo para el botón de abrir/cerrar menú */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #202022;
+  cursor: pointer;
+  z-index: 1100; /* Asegura que el botón esté encima del menú */
+}
+
+/* Agregar un fondo semitransparente cuando el menú está abierto (opcional) */
+.navbar.open ~ .overlay {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 229, 243, 0.5);
+  display: none;
+  z-index: 900;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.about-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.about-card:hover {
+  transform: scale(1.02);
+}
+
+.about-image {
+  width: 300px;
+  object-fit: cover;
+}
+
+.about-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-preview {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.about-button {
+  text-decoration: none;
+  background-color: #fba9d2;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.about-button:hover {
+  background-color: #378279;
+}
+.blog-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blog-header {
+  text-align: center;
+}
+
+.blog-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
