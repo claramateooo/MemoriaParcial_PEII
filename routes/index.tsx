@@ -1,4 +1,5 @@
-import AboutSection from "../islands/Aboutsection.tsx";
+
+import AboutSeection from "../islands/AboutSeection.tsx";
 import InteractiveForm from "../islands/InteractiveForm.tsx";
 
 
@@ -12,7 +13,7 @@ export default function Home() {
       </div>
     
         <InteractiveForm />
-        <AboutSection />
+        <AboutSeection />
         <TestButton />
     </div>
   );

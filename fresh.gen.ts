@@ -9,7 +9,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $shopping from "./routes/shopping.tsx";
-import * as $AboutSection from "./islands/AboutSection.tsx";
+import * as $AboutSeection from "./islands/AboutSeection.tsx";
 import * as $InteractiveForm from "./islands/InteractiveForm.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
 import * as $ShoppingSearch from "./islands/ShoppingSearch.tsx";
@@ -27,7 +27,7 @@ const manifest = {
     "./routes/shopping.tsx": $shopping,
   },
   islands: {
-    "./islands/AboutSection.tsx": $AboutSection,
+    "./islands/AboutSeection.tsx": $AboutSeection,
     "./islands/InteractiveForm.tsx": $InteractiveForm,
     "./islands/Navbar.tsx": $Navbar,
     "./islands/ShoppingSearch.tsx": $ShoppingSearch,
